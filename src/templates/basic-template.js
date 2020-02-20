@@ -1,27 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import "../css/global.css"
 
 const basicTemplate = props => {
   const { pageContext } = props
-  const { pageContent, links } = pageContext
+  const { pageContent } = pageContext
 
   return (
-    <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-      <ul>
-        {pageContent.map((data, index) => {
-          return <li key={`content_item_${index}`}>{data.item}</li>
-        })}
-      </ul>
-      <ul>
-        {links.map((item, index) => {
-          return (
-            <li key={`link_${index}`}>
-              <Link to={item.to}>{item.to}</Link>
-            </li>
-          )
-        })}
-      </ul>
+    <div class="bg-white h-full">
+      {pageContent.map((data, index) => {
+        return <li key={`content_item_${index}`}>{data.item}</li>
+      })}
     </div>
   )
 }
+
 export default basicTemplate

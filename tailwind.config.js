@@ -1,12 +1,11 @@
 module.exports = {
-  modules: {
-    borderColors: ['hover'],
-  },
   theme: {
     container: {
       center: true,
     },
   },
-  variants: {},
+  variants: {
+    borderColors: ["responsive", "hover"],
+  },
   plugins: [],
 }

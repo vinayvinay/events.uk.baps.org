@@ -1,7 +1,7 @@
-path: /msm2020
+path: /lm25/support-us
 template: "basic-template"
 content:
-  title: MSM2020
+  title: Support Us
   introduction:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

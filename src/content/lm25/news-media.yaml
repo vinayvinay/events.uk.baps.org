@@ -1,7 +1,7 @@
-path: /msm2020
+path: /lm25/news-and-media
 template: "basic-template"
 content:
-  title: MSM2020
+  title: News & Media
   introduction:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

@@ -1,7 +1,7 @@
-path: /msm2020
+path: /psm100/events/yogayagna-niyams
 template: "basic-template"
 content:
-  title: MSM2020
+  title: Yogayagna Niyams
   introduction:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

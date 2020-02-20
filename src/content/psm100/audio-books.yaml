@@ -1,7 +1,7 @@
-path: /msm2020
+path: /psm100/media-publications/audio-books
 template: "basic-template"
 content:
-  title: MSM2020
+  title: Audio Books
   introduction:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

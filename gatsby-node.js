@@ -14,10 +14,7 @@ exports.createPages = ({ actions }) => {
       );
 
       createPage({
-        path:
-          "/" +
-          site +
-          (sitePage == "index.yaml" ? "" : "/" + sitePage.split(".")[0]),
+        path: sitePageInfo.path,
         component: require.resolve("./src/templates/" + sitePageInfo.template + ".js"),
         context: {
           pageContent: sitePageInfo.content,

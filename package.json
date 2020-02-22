@@ -23,7 +23,8 @@
     "gatsby-transformer-yaml": "^2.2.25",
     "js-yaml": "^3.13.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "tailwindcss-animatecss": "^0.2.7"
   },
   "devDependencies": {
     "prettier": "^1.19.1",

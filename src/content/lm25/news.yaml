@@ -1,4 +1,4 @@
-path: /lm25/news-and-media/news
+slug: /lm25/news-and-media/news
 template: "basic-template"
 content:
   title: News

@@ -1,4 +1,4 @@
-path: /lm25/contact-us
+slug: /lm25/contact-us
 template: "basic-template"
 content:
   title: Contact Us

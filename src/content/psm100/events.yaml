@@ -1,4 +1,4 @@
-path: /psm100/events
+slug: /psm100/events
 template: "basic-template"
 content:
   title: Events

@@ -1,7 +1,7 @@
-path: /lm25/festival-of-harmony
+slug: /lm25/festival-of-harmony
 template: "basic-template"
 content:
-  title: Festival of Harmony
+  title: The Festival of Harmony
   introduction:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

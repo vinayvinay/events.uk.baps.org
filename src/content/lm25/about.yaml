@@ -1,4 +1,4 @@
-path: /lm25/about
+slug: /lm25/about
 template: "basic-template"
 content:
   title: About

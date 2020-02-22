@@ -1,4 +1,4 @@
-path: /psm100/donate
+slug: /psm100/donate
 template: "basic-template"
 content:
   title: Donate

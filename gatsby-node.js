@@ -15,7 +15,7 @@ exports.createPages = ({ actions }) => {
 
       createPage({
         path: sitePageInfo.path,
-        component: require.resolve("./src/templates/" + sitePageInfo.template + ".js"),
+        component: require.resolve("./src/templates/" + sitePageInfo.template + ".jsx"),
         context: {
           pageContent: sitePageInfo.content,
         },

@@ -7,6 +7,7 @@ module.exports = {
   variants: {
     borderColors: ["responsive", "hover"],
     textColors: ["responsive", "hover"],
+    display: ["responsive", "hover", "group-hover"],
   },
   plugins: [
     require("tailwindcss-animatecss")({

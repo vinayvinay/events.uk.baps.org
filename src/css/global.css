@@ -7,3 +7,13 @@
 #menu-toggle:checked + #menu {
   display: block;
 }
+
+.animated { visibility: visible !important; }
+
+.landing-thirds {
+  transition: all .5s ease-in-out;
+}
+
+.landing-thirds:hover {
+  transform: scale(1.05);
+}

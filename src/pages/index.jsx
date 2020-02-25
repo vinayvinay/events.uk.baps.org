@@ -94,7 +94,7 @@ const IndexPage = () => {
               alt="MSM2020 Backdrop Raw"
               loading="eager"
             />
-            <div class="absolute bottom-0 inset-x-0 mx-32 mb-16 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
+            <div class="w-1/2 mx-auto mb-12 absolute bottom-0 inset-x-0 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
               <Img
                 fluid={images.msm2020Logo.childImageSharp.fluid}
                 alt="MSM2020"
@@ -122,7 +122,7 @@ const IndexPage = () => {
               alt="LM25 Backdrop Raw"
               loading="eager"
             />
-            <div class="absolute bottom-0 inset-x-0 mx-32 mb-16 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
+            <div class="w-1/2 mx-auto mb-12 absolute bottom-0 inset-x-0 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
               <Img
                 fluid={images.lm25Logo.childImageSharp.fluid}
                 alt="LM25"
@@ -150,7 +150,7 @@ const IndexPage = () => {
               alt="PSM100 Backdrop Raw"
               loading="eager"
             />
-            <div class="absolute bottom-0 inset-x-0 mx-32 mb-16 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
+            <div class="w-1/2 mx-auto mb-12 absolute bottom-0 inset-x-0 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
               <Img
                 fluid={images.psm100Logo.childImageSharp.fluid}
                 alt="PSM100"

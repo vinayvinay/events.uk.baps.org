@@ -10,63 +10,63 @@ const IndexPage = () => {
     query {
       msm2020Logo: file(relativePath: { eq: "msm2020-logo.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 50) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25Logo: file(relativePath: { eq: "lm25-logo.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 50) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100Logo: file(relativePath: { eq: "psm100-logo.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 50) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       msm2020Backdrop: file(relativePath: { eq: "msm2020-backdrop.jpg" }) {
         childImageSharp {
-          fluid(duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(quality: 45, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25Backdrop: file(relativePath: { eq: "lm25-backdrop.jpg" }) {
         childImageSharp {
-          fluid(duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(quality: 45, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100Backdrop: file(relativePath: { eq: "psm100-backdrop.jpg" }) {
         childImageSharp {
-          fluid(duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(quality: 45, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       msm2020BackdropRaw: file(relativePath: { eq: "msm2020-backdrop.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 60) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25BackdropRaw: file(relativePath: { eq: "lm25-backdrop.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 60) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100BackdropRaw: file(relativePath: { eq: "psm100-backdrop.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 60) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -81,6 +81,7 @@ const IndexPage = () => {
           <Img
             fluid={images.msm2020Backdrop.childImageSharp.fluid}
             alt="MSM2020 Backdrop"
+            loading="eager"
           />
           <div class="absolute bottom-0 inset-x-0 mb-16 p-3 text-center text-6xl font-black text-white animated fadeIn fast">
             MSM2020
@@ -91,11 +92,13 @@ const IndexPage = () => {
             <Img
               fluid={images.msm2020BackdropRaw.childImageSharp.fluid}
               alt="MSM2020 Backdrop Raw"
+              loading="eager"
             />
             <div class="absolute bottom-0 inset-x-0 mx-32 mb-16 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
               <Img
                 fluid={images.msm2020Logo.childImageSharp.fluid}
                 alt="MSM2020"
+                loading="eager"
               />
             </div>
           </a>
@@ -106,6 +109,7 @@ const IndexPage = () => {
           <Img
             fluid={images.lm25Backdrop.childImageSharp.fluid}
             alt="LM25 Backdrop"
+            loading="eager"
           />
           <div class="absolute bottom-0 inset-x-0 mb-16 p-3 text-center text-6xl font-black text-white animated fadeIn fast">
             LM25
@@ -116,9 +120,14 @@ const IndexPage = () => {
             <Img
               fluid={images.lm25BackdropRaw.childImageSharp.fluid}
               alt="LM25 Backdrop Raw"
+              loading="eager"
             />
             <div class="absolute bottom-0 inset-x-0 mx-32 mb-16 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
-              <Img fluid={images.lm25Logo.childImageSharp.fluid} alt="LM25" />
+              <Img
+                fluid={images.lm25Logo.childImageSharp.fluid}
+                alt="LM25"
+                loading="eager"
+              />
             </div>
           </a>
         </div>
@@ -128,6 +137,7 @@ const IndexPage = () => {
           <Img
             fluid={images.psm100Backdrop.childImageSharp.fluid}
             alt="PSM100 Backdrop"
+            loading="eager"
           />
           <div class="absolute bottom-0 inset-x-0 mb-16 p-3 text-center text-6xl font-black text-white animated fadeIn fast">
             PSM100
@@ -138,11 +148,13 @@ const IndexPage = () => {
             <Img
               fluid={images.psm100BackdropRaw.childImageSharp.fluid}
               alt="PSM100 Backdrop Raw"
+              loading="eager"
             />
             <div class="absolute bottom-0 inset-x-0 mx-32 mb-16 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
               <Img
                 fluid={images.psm100Logo.childImageSharp.fluid}
                 alt="PSM100"
+                loading="eager"
               />
             </div>
           </a>

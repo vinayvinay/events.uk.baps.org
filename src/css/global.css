@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+html {
+  @apply bg-gray-900;
+}
+
 #menu-toggle:checked + #menu {
   display: block;
 }

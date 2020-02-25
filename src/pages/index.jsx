@@ -31,42 +31,42 @@ const IndexPage = () => {
       }
       msm2020Backdrop: file(relativePath: { eq: "msm2020-backdrop.jpg" }) {
         childImageSharp {
-          fluid(quality: 45, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(maxHeight: 500, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25Backdrop: file(relativePath: { eq: "lm25-backdrop.jpg" }) {
         childImageSharp {
-          fluid(quality: 45, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(maxHeight: 500, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100Backdrop: file(relativePath: { eq: "psm100-backdrop.jpg" }) {
         childImageSharp {
-          fluid(quality: 45, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(maxHeight: 500, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       msm2020BackdropRaw: file(relativePath: { eq: "msm2020-backdrop.jpg" }) {
         childImageSharp {
-          fluid(quality: 60) {
+          fluid(maxHeight: 500) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25BackdropRaw: file(relativePath: { eq: "lm25-backdrop.jpg" }) {
         childImageSharp {
-          fluid(quality: 60) {
+          fluid(maxHeight: 500) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100BackdropRaw: file(relativePath: { eq: "psm100-backdrop.jpg" }) {
         childImageSharp {
-          fluid(quality: 60) {
+          fluid(maxHeight: 500) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -83,8 +83,15 @@ const IndexPage = () => {
             alt="MSM2020 Backdrop"
             loading="eager"
           />
-          <div class="absolute bottom-0 inset-x-0 mb-16 p-3 text-center text-6xl font-black text-white animated fadeIn fast">
-            MSM2020
+          <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 p-3 text-center animated fadeIn fast">
+            <div class="text-2xl lg:text-4xl font-black text-white">
+              MSM2020
+            </div>
+            <span class="text-xl lg:text-2xl font-thin text-gray-300">
+              His Holiness Mahant Swami Maharaj in
+              <br />
+              UK & Europe 2020
+            </span>
           </div>
         </div>
         <div class="hidden group-hover:block landing-thirds">
@@ -111,8 +118,13 @@ const IndexPage = () => {
             alt="LM25 Backdrop"
             loading="eager"
           />
-          <div class="absolute bottom-0 inset-x-0 mb-16 p-3 text-center text-6xl font-black text-white animated fadeIn fast">
-            LM25
+          <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 p-3 text-center animated fadeIn fast">
+            <div class="text-2xl md:text-4xl font-black text-white">LM25</div>
+            <span class="text-xl lg:text-2xl font-thin text-gray-300">
+              25th Anniversary of
+              <br />
+              BAPS Shri Swaminarayan Mandir, London
+            </span>
           </div>
         </div>
         <div class="hidden group-hover:block landing-thirds">
@@ -139,8 +151,15 @@ const IndexPage = () => {
             alt="PSM100 Backdrop"
             loading="eager"
           />
-          <div class="absolute bottom-0 inset-x-0 mb-16 p-3 text-center text-6xl font-black text-white animated fadeIn fast">
-            PSM100
+          <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 p-3 text-center animated fadeIn fast">
+            <div class="text-2xl lg:text-4xl font-black text-white">
+              PSM100
+            </div>
+            <span class="text-xl lg:text-2xl font-thin text-gray-300">
+              Centenary Birth Anniversary of
+              <br />
+              His Holiness Pramukh Swami Maharaj
+            </span>
           </div>
         </div>
         <div class="hidden group-hover:block landing-thirds">

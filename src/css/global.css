@@ -4,20 +4,16 @@
 
 @tailwind utilities;
 
-html {
-  @apply bg-gray-900;
-}
-
 #menu-toggle:checked + #menu {
   display: block;
 }
 
 .animated { visibility: visible !important; }
 
-.landing-thirds {
-  transition: all .5s ease-in-out;
+.zoom-on-hover {
+  transition: all 2s ease-out;
 }
 
-.landing-thirds:hover {
+.zoom-on-hover:hover {
   transform: scale(1.05);
 }

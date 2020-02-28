@@ -8,65 +8,65 @@ import "../css/global.css"
 const IndexPage = () => {
   const images = useStaticQuery(graphql`
     query {
-      msm2020Logo: file(relativePath: { eq: "msm2020-logo.png" }) {
+      msm2020Logo: file(relativePath: { eq: "msm2020-logo-monochrome.png" }) {
         childImageSharp {
-          fluid(quality: 50) {
+          fluid(quality: 80) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
-      lm25Logo: file(relativePath: { eq: "lm25-logo.png" }) {
+      lm25Logo: file(relativePath: { eq: "lm25-logo-monochrome.png" }) {
         childImageSharp {
-          fluid(quality: 50) {
+          fluid(quality: 80) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100Logo: file(relativePath: { eq: "psm100-logo.png" }) {
         childImageSharp {
-          fluid(quality: 50) {
+          fluid(quality: 80) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       msm2020Backdrop: file(relativePath: { eq: "msm2020-backdrop.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 500, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(maxHeight: 500, quality: 60, duotone: { highlight: "#f4a261", shadow: "#333333" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25Backdrop: file(relativePath: { eq: "lm25-backdrop.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 500, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(maxHeight: 500, quality: 60, duotone: { highlight: "#f4a261", shadow: "#333333" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100Backdrop: file(relativePath: { eq: "psm100-backdrop.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 500, duotone: { highlight: "#f4a261", shadow: "#264653" }) {
+          fluid(maxHeight: 500, quality: 60, duotone: { highlight: "#f4a261", shadow: "#333333" }) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       msm2020BackdropRaw: file(relativePath: { eq: "msm2020-backdrop.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 500) {
+          fluid(maxHeight: 500, quality: 80) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       lm25BackdropRaw: file(relativePath: { eq: "lm25-backdrop.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 500) {
+          fluid(maxHeight: 500, quality: 80) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       psm100BackdropRaw: file(relativePath: { eq: "psm100-backdrop.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 500) {
+          fluid(maxHeight: 500, quality: 80) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -75,108 +75,107 @@ const IndexPage = () => {
   `)
 
   return (
-    <div class="flex overflow-hidden">
-      <div class="invisible animated fadeInDownBig faster group relative w-1/3">
-        <div class="delay-1s group-hover:hidden">
+    <div class="flex h-screen">
+      <div class="w-1/3 group invisible animated fadeInDownBig delay-1s faster">
+        <div class="group-hover:hidden relative">
           <Img
             fluid={images.msm2020Backdrop.childImageSharp.fluid}
             alt="MSM2020 Backdrop"
             loading="eager"
           />
-          <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 p-3 text-center animated fadeIn fast">
-            <div class="text-2xl lg:text-4xl font-black text-white">
-              MSM2020
-            </div>
-            <span class="text-xl lg:text-2xl font-thin text-gray-300">
-              His Holiness Mahant Swami Maharaj in
-              <br />
-              UK & Europe 2020
-            </span>
-          </div>
-        </div>
-        <div class="hidden group-hover:block landing-thirds">
-          <a href="/msm2020">
+          <div class="w-2/3 mx-auto mb-12 pb-2 absolute bottom-0 inset-x-0 animated fadeIn fast">
             <Img
-              fluid={images.msm2020BackdropRaw.childImageSharp.fluid}
-              alt="MSM2020 Backdrop Raw"
+              fluid={images.msm2020Logo.childImageSharp.fluid}
+              alt="MSM2020"
               loading="eager"
             />
-            <div class="w-1/2 mx-auto mb-12 absolute bottom-0 inset-x-0 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
+          </div>
+        </div>
+        <div class="hidden group-hover:block overflow-hidden relative">
+          <div class="zoom-on-hover">
+            <a href="/msm2020">
               <Img
-                fluid={images.msm2020Logo.childImageSharp.fluid}
-                alt="MSM2020"
+                fluid={images.msm2020BackdropRaw.childImageSharp.fluid}
+                alt="MSM2020 Backdrop Raw"
                 loading="eager"
               />
-            </div>
-          </a>
+              <div class="w-full mx-auto mb-16 pb-2 text-center absolute bottom-0 inset-x-0">
+                <span class="text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+                  His Holiness Mahant Swami Maharaj in &nbsp;
+                  <br class="hidden lg:block" />
+                  UK &amp; Europe 2020
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="invisible animated fadeInDownBig faster delay-1s group relative w-1/3">
-        <div class="delay-2s group-hover:hidden">
+      <div class="w-1/3 group invisible animated fadeInDownBig delay-2s faster">
+        <div class="group-hover:hidden relative">
           <Img
             fluid={images.lm25Backdrop.childImageSharp.fluid}
             alt="LM25 Backdrop"
             loading="eager"
           />
-          <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 p-3 text-center animated fadeIn fast">
-            <div class="text-2xl md:text-4xl font-black text-white">LM25</div>
-            <span class="text-xl lg:text-2xl font-thin text-gray-300">
-              25th Anniversary of
-              <br />
-              BAPS Shri Swaminarayan Mandir, London
-            </span>
-          </div>
-        </div>
-        <div class="hidden group-hover:block landing-thirds">
-          <a href="/lm25">
+          <div class="w-2/3 mx-auto mb-12 absolute bottom-0 inset-x-0 animated fadeIn fast">
             <Img
-              fluid={images.lm25BackdropRaw.childImageSharp.fluid}
-              alt="LM25 Backdrop Raw"
+              fluid={images.lm25Logo.childImageSharp.fluid}
+              alt="LM25"
               loading="eager"
             />
-            <div class="w-1/2 mx-auto mb-12 absolute bottom-0 inset-x-0 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
+          </div>
+        </div>
+        <div class="hidden group-hover:block overflow-hidden relative">
+          <div class="zoom-on-hover">
+            <a href="/lm25">
               <Img
-                fluid={images.lm25Logo.childImageSharp.fluid}
-                alt="LM25"
+                fluid={images.lm25BackdropRaw.childImageSharp.fluid}
+                alt="LM25 Backdrop Raw"
                 loading="eager"
               />
-            </div>
-          </a>
+              <div class="w-full mx-auto mb-16 text-center absolute bottom-0 inset-x-0">
+                <span class="text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+                  25th Anniversary of &nbsp;
+                  <br class="hidden lg:block" />
+                  BAPS Shri Swaminarayan Mandir, London
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="invisible animated fadeInDownBig faster delay-2s group relative w-1/3">
-        <div class="delay-3s group-hover:hidden">
+      <div class="w-1/3 group invisible animated fadeInDownBig delay-3s faster">
+        <div class="group-hover:hidden relative">
           <Img
             fluid={images.psm100Backdrop.childImageSharp.fluid}
             alt="PSM100 Backdrop"
             loading="eager"
           />
-          <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 p-3 text-center animated fadeIn fast">
-            <div class="text-2xl lg:text-4xl font-black text-white">
-              PSM100
-            </div>
-            <span class="text-xl lg:text-2xl font-thin text-gray-300">
-              Centenary Birth Anniversary of
-              <br />
-              His Holiness Pramukh Swami Maharaj
-            </span>
-          </div>
-        </div>
-        <div class="hidden group-hover:block landing-thirds">
-          <a href="/psm100">
+          <div class="w-2/3 mx-auto mb-12 absolute bottom-0 inset-x-0 animated fadeIn fast">
             <Img
-              fluid={images.psm100BackdropRaw.childImageSharp.fluid}
-              alt="PSM100 Backdrop Raw"
+              fluid={images.psm100Logo.childImageSharp.fluid}
+              alt="PSM100"
               loading="eager"
             />
-            <div class="w-1/2 mx-auto mb-12 absolute bottom-0 inset-x-0 p-3 rounded-md bg-white border-2 border-blue-300 animated fadeInUpBig faster">
+          </div>
+        </div>
+        <div class="hidden group-hover:block overflow-hidden relative">
+          <div class="zoom-on-hover">
+            <a href="/psm100">
               <Img
-                fluid={images.psm100Logo.childImageSharp.fluid}
-                alt="PSM100"
+                fluid={images.psm100BackdropRaw.childImageSharp.fluid}
+                alt="PSM100 Backdrop Raw"
                 loading="eager"
               />
-            </div>
-          </a>
+              <div class="w-full mx-auto mb-16 pb-2 text-center absolute bottom-0 inset-x-0">
+                <span class="text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+                  Centenary Birth Anniversary of &nbsp;
+                  <br class="hidden lg:block" />
+                  His Holiness Pramukh Swami Maharaj
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -6,10 +6,24 @@ import Img from "gatsby-image"
 const Header = ({ siteTitle, menuLinks }) => {
   const logos = useStaticQuery(graphql`
     query {
+      msm2020Logo: file(relativePath: { eq: "msm2020-logo.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 60) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
       lm25Logo: file(relativePath: { eq: "lm25-logo.png" }) {
         childImageSharp {
-          fixed(height: 60) {
-            ...GatsbyImageSharpFixed
+          fluid(maxHeight: 60) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      psm100Logo: file(relativePath: { eq: "psm100-logo.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 60) {
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
@@ -19,8 +33,19 @@ const Header = ({ siteTitle, menuLinks }) => {
   return (
     <div class="w-full">
       <div class="container flex flex-wrap items-center">
-        <div class="flex-1 flex px-3 justify-between items-center border-b border-gray-200">
-          <Img fixed={logos.lm25Logo.childImageSharp.fixed} alt="LM25" />
+        <div class="w-1/6 pr-6 flex border-b border-gray-200">
+          <div class="w-1/3 mt-2 mb-2 border-2 border-blue-100 rounded-lg">
+            <Img
+              fluid={logos.msm2020Logo.childImageSharp.fluid}
+              alt="MSM2020"
+            />
+          </div>
+          <div class="w-1/3 mt-2 mb-2 border-2 border-blue-100 rounded-lg">
+            <Img fluid={logos.lm25Logo.childImageSharp.fluid} alt="LM25" />
+          </div>
+          <div class="w-1/3 mt-2 mb-2 border-2 border-blue-100 rounded-lg">
+            <Img fluid={logos.psm100Logo.childImageSharp.fluid} alt="PSM100" />
+          </div>
         </div>
 
         <label
@@ -41,53 +66,59 @@ const Header = ({ siteTitle, menuLinks }) => {
         <input class="hidden" type="checkbox" id="menu-toggle" />
 
         <div
-          class="hidden lg:flex lg:items-center lg:w-auto w-full mt-1"
+          class="hidden lg:flex lg:items-center lg:w-auto w-full mt-2"
           id="menu"
         >
           <nav>
             <ul class="lg:flex items-center justify-between text-base text-gray-700">
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/about">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/about">
                   About
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/festival-of-harmony">
+                <a
+                  class="block lg:px-2 lg:py-4"
+                  href="/lm25/festival-of-harmony"
+                >
                   Festival of Harmony
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/finale-celebrations">
+                <a
+                  class="block lg:px-2 lg:py-4"
+                  href="/lm25/finale-celebrations"
+                >
                   Finale Celebrations
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/gift-shop">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/gift-shop">
                   Gift Shop
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/updates">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/updates">
                   Updates
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/news-media">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/news-media">
                   News &amp; Media
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/faqs">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/faqs">
                   FAQs
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/support-us">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/support-us">
                   Support Us
                 </a>
               </li>
               <li class="lg:p-0 p-3 border-b border-gray-200 hover:text-gray-900 hover:border-red-700">
-                <a class="block lg:p-4" href="/lm25/contact-us">
+                <a class="block lg:px-2 lg:py-4" href="/lm25/contact-us">
                   Contact Us
                 </a>
               </li>

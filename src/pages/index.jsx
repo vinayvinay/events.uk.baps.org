@@ -75,7 +75,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <div class="flex h-screen">
+    <div class="flex page-container mx-auto">
       <div class="w-1/3 group invisible animated fadeInDownBig delay-1s faster">
         <div class="group-hover:hidden relative">
           <Img

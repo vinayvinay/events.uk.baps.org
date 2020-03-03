@@ -75,7 +75,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <div class="flex page-container mx-auto">
+    <div class="flex mx-auto fix-aspect">
       <div class="w-1/3 group invisible animated fadeInDownBig delay-1s faster">
         <div class="group-hover:hidden relative">
           <Img
@@ -83,7 +83,7 @@ const IndexPage = () => {
             alt="MSM2020 Backdrop"
             loading="eager"
           />
-          <div class="w-2/3 mx-auto mb-12 pb-2 absolute bottom-0 inset-x-0 animated fadeIn fast">
+          <div class="w-3/4 mx-auto pb-10 absolute bottom-0 inset-x-0 animated fadeIn fast">
             <Img
               fluid={images.msm2020Logo.childImageSharp.fluid}
               alt="MSM2020"
@@ -99,8 +99,8 @@ const IndexPage = () => {
                 alt="MSM2020 Backdrop Raw"
                 loading="eager"
               />
-              <div class="w-full mx-auto mb-16 pb-2 text-center absolute bottom-0 inset-x-0">
-                <span class="text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+              <div class="w-full mx-auto pb-12 text-center absolute bottom-0 inset-x-0">
+                <span class="title-shadow text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
                   His Holiness Mahant Swami Maharaj in &nbsp;
                   <br class="hidden lg:block" />
                   UK &amp; Europe 2020
@@ -117,7 +117,7 @@ const IndexPage = () => {
             alt="LM25 Backdrop"
             loading="eager"
           />
-          <div class="w-2/3 mx-auto mb-12 absolute bottom-0 inset-x-0 animated fadeIn fast">
+          <div class="w-1/2 mx-auto pb-8 absolute bottom-0 inset-x-0 animated fadeIn fast">
             <Img
               fluid={images.lm25Logo.childImageSharp.fluid}
               alt="LM25"
@@ -133,8 +133,8 @@ const IndexPage = () => {
                 alt="LM25 Backdrop Raw"
                 loading="eager"
               />
-              <div class="w-full mx-auto mb-16 text-center absolute bottom-0 inset-x-0">
-                <span class="text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+              <div class="w-full mx-auto pb-12 text-center absolute bottom-0 inset-x-0">
+                <span class="title-shadow text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
                   25th Anniversary of &nbsp;
                   <br class="hidden lg:block" />
                   BAPS Shri Swaminarayan Mandir, London
@@ -151,7 +151,7 @@ const IndexPage = () => {
             alt="PSM100 Backdrop"
             loading="eager"
           />
-          <div class="w-2/3 mx-auto mb-12 absolute bottom-0 inset-x-0 animated fadeIn fast">
+          <div class="w-1/2 mx-auto pb-8 absolute bottom-0 inset-x-0 animated fadeIn fast">
             <Img
               fluid={images.psm100Logo.childImageSharp.fluid}
               alt="PSM100"
@@ -167,8 +167,8 @@ const IndexPage = () => {
                 alt="PSM100 Backdrop Raw"
                 loading="eager"
               />
-              <div class="w-full mx-auto mb-16 pb-2 text-center absolute bottom-0 inset-x-0">
-                <span class="text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+              <div class="w-full mx-auto pb-12 text-center absolute bottom-0 inset-x-0">
+                <span class="title-shadow text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
                   Centenary Birth Anniversary of &nbsp;
                   <br class="hidden lg:block" />
                   His Holiness Pramukh Swami Maharaj

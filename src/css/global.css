@@ -22,7 +22,11 @@ html {
   transform: scale(1.05);
 }
 
-.page-container {
+.fix-aspect {
   max-width: calc(100vh * 1.8);
   max-height: 100vh;
+}
+
+.title-shadow {
+  text-shadow: -0.05rem 0.05rem 0.05rem #1a202c;
 }

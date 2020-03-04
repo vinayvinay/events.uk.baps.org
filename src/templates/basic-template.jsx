@@ -2,7 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Header from "../components/header"
+
 import "../css/global.css"
+import "../fonts/gotham.css"
 
 const BasicTemplate = (queryResult) => {
   return (

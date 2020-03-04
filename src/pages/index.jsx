@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import "../css/global.css"
+import "../fonts/gotham.css"
 
 const IndexPage = () => {
   const images = useStaticQuery(graphql`
@@ -115,7 +116,7 @@ const IndexPage = () => {
                   loading="eager"
                 />
                 <div class="w-full mx-auto pb-12 text-center absolute bottom-0 inset-x-0">
-                  <span class="title-shadow text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+                  <span class="title-shadow text-l lg:text-xl font-light text-gray-100 animated fadeIn slow">
                     His Holiness Mahant Swami Maharaj in &nbsp;
                     <br class="hidden lg:block" />
                     UK &amp; Europe 2020
@@ -149,7 +150,7 @@ const IndexPage = () => {
                   loading="eager"
                 />
                 <div class="w-full mx-auto pb-12 text-center absolute bottom-0 inset-x-0">
-                  <span class="title-shadow text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+                  <span class="title-shadow text-l lg:text-xl font-light text-gray-100 animated fadeIn slow">
                     25th Anniversary of &nbsp;
                     <br class="hidden lg:block" />
                     BAPS Shri Swaminarayan Mandir, London
@@ -183,7 +184,7 @@ const IndexPage = () => {
                   loading="eager"
                 />
                 <div class="w-full mx-auto pb-12 text-center absolute bottom-0 inset-x-0">
-                  <span class="title-shadow text-xl lg:text-2xl font-light text-gray-100 animated fadeIn slow">
+                  <span class="title-shadow text-l lg:text-xl font-light text-gray-100 animated fadeIn slow">
                     Centenary Birth Anniversary of &nbsp;
                     <br class="hidden lg:block" />
                     His Holiness Pramukh Swami Maharaj
